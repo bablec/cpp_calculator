@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 #include <exception>
-#include "stack.h"
-#include "fraction.h"
-#include "dictionary.h"
+#include <stack.h>
+#include <fraction.h>
+#include <dictionary.h>
 
 using namespace std;
 

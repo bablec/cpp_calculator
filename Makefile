@@ -1,11 +1,9 @@
-project2: main.o fraction.o dictionary.o
-	g++ -o project2 main.o fraction.o dictionary.o
+CFLAGS = -c -I$(HOME)/Libraries/include
+LFLAGS = -L$(HOME)/Libraries/lib
+LIB = -ldataStructures
 
-main.o: main.cc stack.h fraction.h dictionary.h
-	g++ -c main.cc
+project: main.o
+	g++ $(LFLAGS) -o project main.o $(LIB)
 
-fraction.o: fraction.cc fraction.h
-	g++ -c fraction.cc
-
-dictionary.o: dictionary.cc dictionary.h fraction.h
-	g++ -c dictionary.cc
+main.o: main.cc
+	g++ $(CFLAGS) main.cc
